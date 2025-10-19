@@ -1,9 +1,7 @@
 import pandas as pd
-import zipfile
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
-import optuna
 import math
 
 
@@ -37,9 +35,7 @@ print('Test size:  ', test.shape)
 cat_col = list(train.select_dtypes(include='object').columns)
 num_col = list(train.select_dtypes(
     exclude='object').columns.difference(['y', 'id']))
-# %%
 
-# print(sns.color_palette("pastel").as_hex())
 # %%
 columns = num_col
 n_cols = 3
@@ -70,12 +66,12 @@ plt.tight_layout()
 # %%
 plt.figure(figsize=(12, 6))
 
-# Преобразуем y в строковый или категориальный тип
+
 sns.violinplot(
     data=train,
-    y=train['y'].astype(str),   # Преобразуем в строки!
+    y=train['y'].astype(str),  
     x='duration',
-    hue=train['y'].astype(str),  # Тоже преобразуем для hue
+    hue=train['y'].astype(str),  
     palette=['#78BC61', '#FF7F50'],
     # alpha=0.5,
     split=False,
@@ -220,9 +216,9 @@ histplot_hyperparams = {
 # line_style = '--'
 
 custom_palette = {
-    'train': '#78BC61',    # зеленый для train
-    'test': '#3498DB',     # синий для test
-    'origin': '#FF7F50'    # оранжевый для origin
+    'train': '#78BC61',   
+    'test': '#3498DB',     
+    'origin': '#FF7F50'    
 }
 
 columns = num_col
@@ -248,18 +244,3 @@ for i in range(i+1, len(ax)):
     ax[i].axis('off')
 
 plt.tight_layout()
-# %%
-
-# %%
-
-# %%
-
-# %%
-
-# %%
-
-# %%
-
-# %%
-
-# %%
