@@ -8,7 +8,7 @@ This project implements a machine learning solution to predict if a client will 
 
 ## Results
 
-Achieved **top 12%** in the [Playground Series - Season 5, Episode 1](https://www.kaggle.com/competitions/playground-series-s5e1) competition on Kaggle.
+Achieved **top 12%** in the [Playground Series - Season 5, Episode 8](https://www.kaggle.com/competitions/playground-series-s5e8) competition on Kaggle.
 
 **Final Leaderboard Score:** 0.97651
 
